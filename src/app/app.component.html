@@ -1,0 +1,33 @@
+<mat-drawer-container class="example-container"
+                      [hasBackdrop]="false"
+                      autosize>
+  <mat-drawer #drawer
+              class="example-sidenav"
+              mode="side"
+              [opened]="true">
+    <mat-toolbar color="primary">Tisza-tó</mat-toolbar>
+    <div class="content">
+      <h4>Milyen <u>színű</u> a tó közepén található kör az oldal betöltésekor?</h4>
+    </div>
+  </mat-drawer>
+
+  <div class="example-sidenav-content">
+    <div class="buttons">
+      <button class="zoom-in"
+              mat-mini-fab
+              color="primary"
+              (click)="zoomIn()">
+        <mat-icon>add</mat-icon>
+      </button>
+      <button class="zoom-out"
+              mat-mini-fab
+              color="primary"
+              (click)="zoomOut()">
+        <mat-icon>remove</mat-icon>
+      </button>
+    </div>
+    <div [attr.id]="mapId"
+         class="ol-map"></div>
+  </div>
+
+</mat-drawer-container>
